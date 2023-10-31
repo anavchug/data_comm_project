@@ -20,6 +20,7 @@ public class YoutubeApi {
 
         apiUrl+= "&maxResults=" + Integer.toString(maxResults);
         apiUrl+= "&regionCode=" + region;
+        apiUrl+= "&videoCategoryId=25";
         apiUrl+= "&key=" + this.apiKey;
     }
 
