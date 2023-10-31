@@ -16,7 +16,7 @@ public class YoutubeApi {
     String apiUrl = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular";
 
 
-    YoutubeApi(String region,int maxResults){
+    public YoutubeApi(String region,int maxResults){
 
         apiUrl+= "&maxResults=" + Integer.toString(maxResults);
         apiUrl+= "&regionCode=" + region;
