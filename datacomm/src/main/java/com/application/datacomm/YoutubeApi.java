@@ -11,8 +11,8 @@ import org.json.JSONObject;
 public class YoutubeApi {
 
 
-    // Replace later
-    String apiKey = "AIzaSyA-nMg2ZxQoSos_Z0GzEqk8MkQFAWVE70E";
+    // Replace with api key I send you
+    String apiKey = "";
     String apiUrl = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular";
 
 
