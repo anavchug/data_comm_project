@@ -13,7 +13,7 @@ public class VideoController {
     @GetMapping("/video")
     public Video video() throws Exception{
 
-       YoutubeApi request = new YoutubeApi("US",25);
+       YoutubeApi request = new YoutubeApi("US",10);
        String result = request.makeRequest();
 
        // Parses json and returns Video record

@@ -1,3 +1,3 @@
 package com.application.datacomm;
 
-public record Item(String title, String desc, String url, String thumbUrl){};
+public record Item(String title, String url, String thumbUrl){};

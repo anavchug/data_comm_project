@@ -44,11 +44,11 @@ public class YoutubeApi {
             
             String videoUrl = videoStub + video.getString("id");
             String videoTitle = videoSnip.getString("title");
-            String videoDesc = videoSnip.getString("description");
+            //String videoDesc = videoSnip.getString("description");
             String thumbUrl = size.getString("url");
 
 
-            videoItems[i] = new Item(videoTitle, videoDesc, videoUrl, thumbUrl);
+            videoItems[i] = new Item(videoTitle,videoUrl, thumbUrl);
 
 
        }
