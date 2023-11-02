@@ -5,6 +5,13 @@ public class Video{
 
     private String title, url, thumbUrl;
 
+    public Video(String title, String url, String thumbUrl){
+
+        this.title = title;
+        this.url = url;
+        this.thumbUrl = thumbUrl;
+    }
+
     public String getTitle() {
         return title;
     }
