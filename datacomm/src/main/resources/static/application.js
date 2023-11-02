@@ -17,25 +17,23 @@ function handleData(){
         data.forEach((item) =>{
 
             let holder = document.createElement("div");
-            let title = document.createElement("h2");
+            let title = document.createElement("h3");
             let img = document.createElement('img');
 
-            let url = document.createElement("h2");
+            
             let link = document.createElement('a');
 
             link.setAttribute('href', item.url);
-            //link.textContent = "Link";
-            //url.appendChild(link);
+            
             
 
             title.textContent = item.title;
             img.setAttribute("src",item.thumbUrl);
             link.appendChild(img);
 
-            holder.appendChild(title);
             holder.appendChild(link);
-            //holder.appendChild(img);
-            //holder.appendChild(url);
+            holder.appendChild(title);
+            
             
 
             source.appendChild(holder);
