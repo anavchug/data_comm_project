@@ -22,17 +22,24 @@ function handleData(){
 
             
             let link = document.createElement('a');
-
             link.setAttribute('href', item.url);
+            link.setAttribute('target',"_blank");
+            link.setAttribute('rel',"noopener noreferrer")
+
+    
             
-            
+            let link2 = document.createElement('a');
+            link2.setAttribute('href', item.url);
+            link2.setAttribute('target',"_blank");
+            link2.setAttribute('rel',"noopener noreferrer")
+            link2.appendChild(title);
 
             title.textContent = item.title;
             img.setAttribute("src",item.thumbUrl);
             link.appendChild(img);
 
             holder.appendChild(link);
-            holder.appendChild(title);
+            holder.appendChild(link2);
             
             
 
