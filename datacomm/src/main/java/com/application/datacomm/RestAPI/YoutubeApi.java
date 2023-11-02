@@ -8,6 +8,9 @@ import java.net.URL;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.List;
+import java.util.ArrayList;
+
 public class YoutubeApi {
 
 
@@ -24,14 +27,14 @@ public class YoutubeApi {
         apiUrl+= "&key=" + this.apiKey;
     }
 
-    public static Video parseJson(String jsonData){
+    public static List<Video> parseJson(String jsonData){
 
         String videoStub = "https://www.youtube.com/watch?v=";
         
         JSONObject json = new JSONObject(jsonData);
         JSONArray items = json.getJSONArray("items");
 
-        Item[] videoItems = new Item[items.length()];
+        List<Video> videoItems = new ArrayList<>();
 
 
         for(int i = 0; i < items.length(); i++){
@@ -48,12 +51,12 @@ public class YoutubeApi {
             String thumbUrl = size.getString("url");
 
 
-            videoItems[i] = new Item(videoTitle,videoUrl, thumbUrl);
-
+            videoItems.add(new Video(videoTitle, videoUrl, thumbUrl));
 
        }
 
-       return new Video(videoItems);
+       
+       return videoItems;
 
 
     }
