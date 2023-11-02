@@ -1,4 +1,4 @@
-package com.application.datacomm;
+package com.application.datacomm.RestAPI;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -12,7 +12,7 @@ public class YoutubeApi {
 
 
     // Replace with api key I send you
-    String apiKey = "";
+    String apiKey = "AIzaSyA-nMg2ZxQoSos_Z0GzEqk8MkQFAWVE70E";
     String apiUrl = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular";
 
 
