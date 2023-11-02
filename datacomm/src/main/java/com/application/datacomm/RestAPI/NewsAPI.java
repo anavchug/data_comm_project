@@ -10,7 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class NewsAPI {
-    String apiKey = "56ca5b18effa4d25ad33ffcba8752610";
+    String apiKey = "";
     String apiUrl = "https://newsapi.org/v2/top-headlines";
 
     public NewsAPI(String country, int pageSize){
