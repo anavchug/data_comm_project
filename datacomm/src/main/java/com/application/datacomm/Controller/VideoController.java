@@ -16,7 +16,7 @@ public class VideoController {
     @GetMapping("/video")
     public List<Video> video() throws Exception{
 
-       YoutubeApi request = new YoutubeApi("US",10);
+       YoutubeApi request = new YoutubeApi("US",12);
        String videoUrl = request.getVideoAPIUrl();
        String result = Request.makeRequest(videoUrl);
 
