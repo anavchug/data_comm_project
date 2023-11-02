@@ -4,10 +4,16 @@
     display:flex;
     flex-direction: row;
     flex-wrap:wrap;
+    margin:75px;
 }
 
 #videos div{
 
     width:25%;
 
+}
+
+#videos img{
+
+    width:90%;
 }
