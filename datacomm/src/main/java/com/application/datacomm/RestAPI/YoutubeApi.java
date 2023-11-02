@@ -1,22 +1,16 @@
 package com.application.datacomm.RestAPI;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import com.application.datacomm.DataObject.Video;
 
 import java.util.List;
 import java.util.ArrayList;
 
 public class YoutubeApi {
-
-
-    // Replace with api key I send you
-    String apiKey = "";
-    String apiUrl = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular";
+    private String apiKey = APIKeys.YOUTUBE_KEY;
+    private String apiUrl = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular";
 
 
     public YoutubeApi(String region,int maxResults){
@@ -57,35 +51,10 @@ public class YoutubeApi {
 
        
        return videoItems;
-
-
     }
 
-
-    public String makeRequest() throws Exception{
-
-        URL request = new URL(this.apiUrl);
-        HttpURLConnection con = (HttpURLConnection) request.openConnection();
-        con.setRequestMethod("GET");
-        
-
-        BufferedReader in = new BufferedReader(
-        new InputStreamReader(con.getInputStream()));
-
-        String inputLine;
-
-        StringBuffer content = new StringBuffer();
-        while ((inputLine = in.readLine()) != null) {
-            content.append(inputLine);
-        }
-        in.close();
-
-        con.disconnect();
-
-        return content.toString();
-
+    public String getVideoAPIUrl(){
+        return apiUrl;
     }
 
-    
-    
 }

@@ -1,4 +1,4 @@
-package com.application.datacomm.RestAPI;
+package com.application.datacomm.DataObject;
 
 
 public class Video{
