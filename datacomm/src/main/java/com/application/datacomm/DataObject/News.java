@@ -1,4 +1,4 @@
-package com.application.datacomm.RestAPI;
+package com.application.datacomm.DataObject;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class News {

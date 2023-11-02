@@ -1,17 +1,15 @@
 package com.application.datacomm.RestAPI;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.application.datacomm.DataObject.News;
+
 public class NewsAPI {
-    String apiKey = ""; //Put your api key here
-    String apiUrl = "https://newsapi.org/v2/top-headlines";
+    private String apiKey = APIKeys.NEWS_KEY;
+    private String apiUrl = "https://newsapi.org/v2/top-headlines";
 
     public NewsAPI(String country, int pageSize){
         apiUrl += "?country=" + country;
@@ -53,27 +51,9 @@ public class NewsAPI {
         }
         return news;
     }
-    
-     public String makeRequest() throws Exception{
 
-        URL request = new URL(this.apiUrl);
-        HttpURLConnection con = (HttpURLConnection) request.openConnection();
-        con.setRequestMethod("GET");
-        
-        BufferedReader in = new BufferedReader(
-        new InputStreamReader(con.getInputStream()));
-
-        String inputLine;
-
-        StringBuffer content = new StringBuffer();
-        while ((inputLine = in.readLine()) != null) {
-            content.append(inputLine);
-        }
-        in.close();
-
-        con.disconnect();
-
-        return content.toString();
-
+    public String getNewsAPIUrl(){
+        return apiUrl;
     }
+    
 }

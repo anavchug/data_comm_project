@@ -6,8 +6,9 @@ import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.application.datacomm.RestAPI.News;
+import com.application.datacomm.DataObject.News;
 import com.application.datacomm.RestAPI.NewsAPI;
+import com.application.datacomm.RestAPI.Request;
 
 @RestController
 public class NewsController {
@@ -15,8 +16,10 @@ public class NewsController {
     public List<News> getNews() {
         try {
             NewsAPI newsAPI = new NewsAPI("us", 20);
+            String newsUrl = newsAPI.getNewsAPIUrl();
+            
             // Make a request to the News API
-            String jsonData = newsAPI.makeRequest();
+            String jsonData = Request.makeRequest(newsUrl);
 
             // Parse the JSON data
             List<News> newsList = NewsAPI.parseJson(jsonData);
