@@ -11,7 +11,7 @@ function newsData(){
     let news = document.querySelector('#news');
 
     data.forEach(obj => {
-      if(obj.imageUrl.length != 0 || obj.title.length != 0){
+        console.log(obj.imageUrl);
         let articleElement = document.createElement('div');
         let titleElement = document.createElement('h3');
         let imageUrlElement = document.createElement('img');
@@ -35,7 +35,6 @@ function newsData(){
         articleElement.appendChild(link2);
 
         news.appendChild(articleElement);
-      }
     });
   
   } else {
