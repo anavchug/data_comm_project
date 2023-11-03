@@ -1,0 +1,16 @@
+#news {
+  display:flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  margin:75px;
+}
+#news div{
+
+  width:25%;
+
+}
+#news img{
+
+  width:90%;
+  height:70%;
+}

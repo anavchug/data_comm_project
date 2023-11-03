@@ -15,7 +15,7 @@ public class NewsController {
     @GetMapping("/news")
     public List<News> getNews() {
         try {
-            NewsAPI newsAPI = new NewsAPI("us", 20);
+            NewsAPI newsAPI = new NewsAPI("us", 12);
             String newsUrl = newsAPI.getNewsAPIUrl();
             
             // Make a request to the News API
