@@ -26,24 +26,24 @@ public class NewsAPI {
             for (int i = 0; i < articlesArray.length(); i++) {
                 JSONObject articleObject = articlesArray.getJSONObject(i);
     
-                // Handle exceptions when extracting data
-                try {
+                if (articleObject.has("title") && articleObject.has("urlToImage")) {
                     String title = articleObject.getString("title");
                     String description = articleObject.optString("description", "No Description");
                     String url = articleObject.getString("url");
                     String content = articleObject.optString("content", "");
                     String imageUrl = articleObject.optString("urlToImage", "");
     
-                    News newsObject = new News();
-                    newsObject.setTitle(title);
-                    newsObject.setDescription(description);
-                    newsObject.setContent(content);
-                    newsObject.setUrl(url);
-                    newsObject.setImageUrl(imageUrl);
+                    // Check if the imageUrl and title are not empty
+                    if (!imageUrl.isEmpty() && !title.isEmpty()) {
+                        News newsObject = new News();
+                        newsObject.setTitle(title);
+                        newsObject.setDescription(description);
+                        newsObject.setContent(content);
+                        newsObject.setUrl(url);
+                        newsObject.setImageUrl(imageUrl);
     
-                    news.add(newsObject);
-                } catch (Exception e) {
-                    e.printStackTrace();
+                        news.add(newsObject);
+                    }
                 }
             }
         } catch (Exception e) {
@@ -51,6 +51,7 @@ public class NewsAPI {
         }
         return news;
     }
+    
 
     public String getNewsAPIUrl(){
         return apiUrl;
