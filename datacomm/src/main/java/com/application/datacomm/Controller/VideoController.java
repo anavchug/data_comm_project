@@ -15,7 +15,7 @@ public class VideoController {
 
 
     @GetMapping("/video")
-    public List<Video> video(@RequestParam(value ="videoCategory", defaultValue = "25") String videoCategory) throws Exception{
+    public List<Video> video(@RequestParam(value ="category", defaultValue = "25") String videoCategory) throws Exception{
 
        YoutubeApi request = new YoutubeApi("US",videoCategory,12);
        String videoUrl = request.getVideoAPIUrl();
