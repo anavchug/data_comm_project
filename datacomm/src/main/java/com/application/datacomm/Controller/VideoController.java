@@ -1,6 +1,7 @@
 package com.application.datacomm.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.application.datacomm.DataObject.Video;
 import com.application.datacomm.RestAPI.Request;
@@ -14,9 +15,9 @@ public class VideoController {
 
 
     @GetMapping("/video")
-    public List<Video> video() throws Exception{
+    public List<Video> video(@RequestParam(value ="videoCategory", defaultValue = "25") String videoCategory) throws Exception{
 
-       YoutubeApi request = new YoutubeApi("US",12);
+       YoutubeApi request = new YoutubeApi("US",videoCategory,12);
        String videoUrl = request.getVideoAPIUrl();
        String result = Request.makeRequest(videoUrl);
 
