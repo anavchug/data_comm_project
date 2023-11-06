@@ -17,7 +17,7 @@ public class ContentController {
 
     @GetMapping("/")
     public ResponseEntity<InputStreamResource> main() throws IOException {
-        ClassPathResource htmlFile = new ClassPathResource("template/index.html");
+        ClassPathResource htmlFile = new ClassPathResource("templates/index.html");
         String htmlContent = new String(htmlFile.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
 
         return ResponseEntity
