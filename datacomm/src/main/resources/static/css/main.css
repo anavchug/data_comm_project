@@ -22,3 +22,31 @@ h1{
 
     width:90%;
 }
+
+  .main-nav {
+    display: flex;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-left: 5px;
+  }
+  
+  .nav-item a {
+    display: block;
+    padding: 5px 10px; 
+    background-color: #000000;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #000000;
+  }
+  
+  .nav-item a:hover {
+    background-color: #000000;
+  }

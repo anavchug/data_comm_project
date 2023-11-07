@@ -11,10 +11,19 @@ public class NewsAPI {
     private String apiKey = APIKeys.NEWS_KEY;
     private String apiUrl = "https://newsapi.org/v2/top-headlines";
 
+    //constructor when category is not specified
     public NewsAPI(String country, int pageSize){
         apiUrl += "?country=" + country;
         apiUrl += "&pageSize=" + pageSize;
         apiUrl += "&apiKey="+this.apiKey;
+    }
+
+    public NewsAPI(String country, int pageSize, String category){
+        apiUrl += "?country=" + country;
+        apiUrl += "&pageSize=" + pageSize;
+        apiUrl += "&apiKey="+this.apiKey;
+        apiUrl += "&category=" + category;
+
     }
 
     public static List<News> parseJson(String jsonData) {

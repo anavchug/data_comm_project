@@ -4,11 +4,26 @@ request.open("GET","http://localhost:8080/news");
 request.addEventListener("load",newsData)
 request.send();
 
+document.querySelectorAll('ul li a').forEach(function(link) {
+  link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const category = event.target.getAttribute('data-category');
+      fetchNewsData(category);
+  });
+});
+
+function fetchNewsData(category) {
+  const request = new XMLHttpRequest();
+  request.open("GET", `http://localhost:8080/news?category=${category}`);
+  request.addEventListener("load", newsData);
+  request.send();
+}
 
 function newsData(){
   if (this.status == 200) {
     data = JSON.parse(this.responseText);
     let news = document.querySelector('#news');
+    news.innerHTML  = "";
 
     data.forEach(obj => {
         console.log(obj.imageUrl);
