@@ -12,11 +12,27 @@ request.send();
 
 document.querySelectorAll('ul li a').forEach(function(link) {
     link.addEventListener('click', function(event) {
+
+        let values = {"entertainment":"24","sports":"17","science":"28"};
+
         event.preventDefault();
         const category = event.target.getAttribute('data-category');
         fetchNewsData(category);
+        fetchVideoData(values[category]);
+
+
     });
   });
+
+
+function fetchVideoData(category){
+
+    const request = new XMLHttpRequest();
+    request.open("GET", `http://localhost:8080/video?category=${category}`);
+    request.addEventListener("load",handleData);
+    request.send();
+
+}
 
 function handleData(){
 
@@ -25,6 +41,8 @@ function handleData(){
         let data = JSON.parse(this.responseText);
 
         let source = document.getElementById("videos");
+
+        source.textContent = "";
 
         data.forEach((item) =>{
 
