@@ -10,7 +10,7 @@ request.open("GET","http://localhost:8080/news");
 request.addEventListener("load",newsData)
 request.send();
 
-document.querySelectorAll('ul li a').forEach(function(link) {
+document.querySelectorAll('h2 a').forEach(function(link) {
     link.addEventListener('click', function(event) {
 
         let values = {"entertainment":"24","sports":"17","science":"28"};
