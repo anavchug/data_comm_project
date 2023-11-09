@@ -60,3 +60,9 @@ h1{
   .nav-item a:hover {
     background-color: #000000;
   }
+  #videos h3{
+    color: black;
+  }
+  #videos a{
+    text-decoration: none;
+  }
