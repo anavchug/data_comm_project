@@ -18,6 +18,13 @@ h1{
 
 }
 
+.nav-flex{
+
+   display:flex;
+   justify-content: space-around;
+
+}
+
 #videos img{
 
     width:90%;
@@ -25,8 +32,9 @@ h1{
 
   .main-nav {
     display: flex;
+    
   }
-  
+
   .nav-list {
     list-style: none;
     display: flex;
@@ -36,6 +44,8 @@ h1{
   
   .nav-item {
     margin-left: 5px;
+    width:25%;
+    text-align: center;
   }
   
   .nav-item a {
