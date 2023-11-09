@@ -13,7 +13,7 @@ request.send();
 document.querySelectorAll('h2 a').forEach(function(link) {
     link.addEventListener('click', function(event) {
 
-        let values = {"entertainment":"24","sports":"17","science":"28"};
+        let values = {"entertainment":"24","sports":"17","science":"28","general":"25"};
 
         event.preventDefault();
         const category = event.target.getAttribute('data-category');
