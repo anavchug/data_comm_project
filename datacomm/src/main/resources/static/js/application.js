@@ -54,7 +54,9 @@ function handleData(){
             let link = document.createElement('a');
             link.setAttribute('href', item.url);
             link.setAttribute('target',"_blank");
-            link.setAttribute('rel',"noopener noreferrer")
+            link.setAttribute('rel',"noopener noreferrer");
+            link.style.textDecoration = 'none';
+            link.style.color = 'black';
 
     
             
@@ -62,6 +64,8 @@ function handleData(){
             link2.setAttribute('href', item.url);
             link2.setAttribute('target',"_blank");
             link2.setAttribute('rel',"noopener noreferrer")
+            link2.style.textDecoration = 'none';
+            link2.style.color = 'black';
             link2.appendChild(title);
 
             title.textContent = item.title;
@@ -104,11 +108,15 @@ function fetchNewsData(category) {
           link.setAttribute('href', obj.url);
           link.setAttribute('target',"_blank");
           link.setAttribute('rel',"noopener noreferrer")
+          link.style.textDecoration = 'none';
+          link.style.color = 'black';
   
           let link2 = document.createElement('a');
           link2.setAttribute('href', obj.url);
           link2.setAttribute('target',"_blank");
-          link2.setAttribute('rel',"noopener noreferrer")
+          link2.setAttribute('rel',"noopener noreferrer");
+          link2.style.textDecoration = 'none';
+          link2.style.color = 'black';
           link2.appendChild(titleElement);
   
           imageUrlElement.setAttribute("src", obj.imageUrl);
