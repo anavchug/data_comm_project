@@ -1,4 +1,11 @@
 
+body{
+
+  background-color: hsl(210, 20%, 90%); 
+  color: #333; 
+}
+
+
 h1{
 
     text-align: center;
