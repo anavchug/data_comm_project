@@ -4,6 +4,13 @@ h1{
     text-align: center;
 }
 
+.header-content{
+
+  text-align: center;
+  background-color: lightblue;
+  padding:10px;
+}
+
 #videos{
 
     display:flex;
