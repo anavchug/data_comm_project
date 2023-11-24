@@ -17,6 +17,7 @@ h1{
     flex-direction: row;
     flex-wrap:wrap;
     margin:75px;
+    margin-top:20px;
 }
 
 #videos div{
