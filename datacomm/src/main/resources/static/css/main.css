@@ -4,6 +4,11 @@ h1{
     text-align: center;
 }
 
+.section-header{
+
+    border-bottom: 5px solid black;
+}
+
 .header-content{
 
   text-align: center;
