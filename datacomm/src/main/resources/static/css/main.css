@@ -89,7 +89,7 @@ h1{
     font-family: Arial, sans-serif; 
   }
   
-  .about{
+  .about a{
     column-rule: 20px;
     display: block;
     padding: 5px 10px; 
