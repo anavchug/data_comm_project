@@ -76,6 +76,29 @@ h1{
     text-decoration: none;
     border: 1px solid #000000;
   }
+
+  .aboutstyle{
+    text-align: center;
+    background-color: rgb(57, 202, 255), 246, 241);
+    
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-family: Arial, sans-serif; 
+  }
+  
+  .about{
+    column-rule: 20px;
+    display: block;
+    padding: 5px 10px; 
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #000000;
+   
+  }
   
   .nav-item a:hover {
     background-color: #000000;

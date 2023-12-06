@@ -25,5 +25,14 @@ public class ContentController {
                 .contentType(MediaType.TEXT_HTML)
                 .body(new InputStreamResource(new ByteArrayInputStream(htmlContent.getBytes())));
     }
-    
+     @GetMapping("/about")
+    public ResponseEntity<InputStreamResource> about() throws IOException {
+        ClassPathResource htmlFile = new ClassPathResource("templates/about.html");
+        String htmlContent = new String(htmlFile.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
+
+        return ResponseEntity
+                .ok()
+                .contentType(MediaType.TEXT_HTML)
+                .body(new InputStreamResource(new ByteArrayInputStream(htmlContent.getBytes())));
+    }
 }
