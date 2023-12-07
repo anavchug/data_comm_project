@@ -32,7 +32,7 @@ Before you begin, ensure you have met the following requirements:
 - Open the project in your preferred Integrated Development Environment (IDE).
 - Go to the DatacommApplication class and run it.
 
-![page ss 1](https://github.com/anavchug/gpc-app/assets/72577896/735092ab-3c8b-4cd3-9d9d-74f15c973dbd)
+![home page data comm](https://github.com/anavchug/data_comm_project/assets/72577896/2a860e48-efdf-419d-bf27-5b48b0cdd61c)
 
 ![page ss2](https://github.com/anavchug/gpc-app/assets/72577896/801644a4-6e93-4563-8269-f29287249107)
 
